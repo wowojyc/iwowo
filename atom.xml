@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[一个普普通通的码农]]></title>
+  <title><![CDATA[iwowo]]></title>
   <subtitle><![CDATA[I am a slow walker , but I never walk backwards .(Abraham Lincoln , American president)]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://wowojyc.github.io/"/>
@@ -8,7 +8,7 @@
   <id>http://wowojyc.github.io/</id>
   
   <author>
-    <name><![CDATA[yichao.jiang]]></name>
+    <name><![CDATA[iwowo]]></name>
     
   </author>
   
