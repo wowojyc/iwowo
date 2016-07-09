@@ -906,7 +906,7 @@ a
   font-weight: normal;
 }
 #sidebar .widget .entry {
-  font-size: 0.9em;
+  font-size: 1.2em;
   padding: 15px 20px;
 }
 #sidebar .widget ul,
@@ -971,6 +971,7 @@ a
 }
 #sidebar .tagcloud .entry {
   padding-right: 5px;
+  font-size: 1.1em;
 }
 #sidebar .tagcloud a {
   margin-right: 10px;
