@@ -15,7 +15,7 @@
 	})();
 	</script>
   
-  <title>关于 | 不积跬步，无以至千里</title>
+  <title>2016-07-13个人工作日记 | 不积跬步，无以至千里</title>
   <meta name="author" content="wowojyc">
   
   <meta name="description" content="To be better">
@@ -23,7 +23,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="关于"/>
+  <meta property="og:title" content="2016-07-13个人工作日记"/>
   <meta property="og:site_name" content="不积跬步，无以至千里"/>
 
   
@@ -60,31 +60,69 @@
 </div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-	关于
+	2016-07-13个人工作日记
   </h1>
   <p class="article-author">By
     
       <a href="http://wowojyc.github.io" title="wowojyc">wowojyc</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-07-09T08:10:45.000Z" itemprop="datePublished">2016-07-09</time>
-    更新日期:<time datetime="2016-07-09T08:14:01.209Z" itemprop="dateModified">2016-07-09</time>
+    <time datetime="2016-07-13T12:00:00.000Z" itemprop="datePublished">2016-07-13</time>
+    更新日期:<time datetime="2016-07-13T14:03:26.093Z" itemprop="dateModified">2016-07-13</time>
     
   </p>
 </header>
     <div class="entry">
 		
-        <p>有待完善，敬请期待…</p>
+        <p>mysql调用sql脚本，java调用shell，linux几个常用命令<br><a id="more"></a></p>
+<h5 id="1-MySQL执行外部sql脚本"><a href="#1-MySQL执行外部sql脚本" class="headerlink" title="1. MySQL执行外部sql脚本"></a>1. MySQL执行外部sql脚本</h5><ul>
+<li>登录MySQL客户端，source sql文件的完整路径信息</li>
+<li>登录MySQL客户端, \. sql文件全路径</li>
+</ul>
+<h4 id="2-Java调用shell的方法"><a href="#2-Java调用shell的方法" class="headerlink" title="2.Java调用shell的方法"></a>2.Java调用shell的方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// java调用shell</div><div class="line">            Process process = Runtime.getRuntime().exec(shellString); </div><div class="line">            BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));  </div><div class="line">            String line = &quot;&quot;;  </div><div class="line">            while ((line = input.readLine()) != null) &#123;  </div><div class="line">                processList.add(line);  </div><div class="line">            &#125;  </div><div class="line">            input.close(); </div><div class="line">            // 等待结果返回</div><div class="line">            int exitValue = process.waitFor();  </div><div class="line">            if (0 != exitValue) &#123;  </div><div class="line">                System.out.println(&quot;call shell failed. error code is :&quot; + exitValue);  </div><div class="line">            &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 或者</div><div class="line">            List&lt;String&gt; commands = new ArrayList&lt;String&gt;();</div><div class="line">            commands.add(&quot;pwd&quot;);</div><div class="line">            ProcessBuilder builder = new ProcessBuilder(commands);</div><div class="line">            Process process = builder.start();</div></pre></td></tr></table></figure>
+<pre><code>使用第二种的话，可以通过设置系统环境变量
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Map&lt;String, String&gt; env = builder.environment(); //获得进程的环境</div></pre></td></tr></table></figure>
+<h6 id="在这里遇到的主要问题是-由于shell脚本中使用了-JAVA-HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。"><a href="#在这里遇到的主要问题是-由于shell脚本中使用了-JAVA-HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。" class="headerlink" title="在这里遇到的主要问题是:由于shell脚本中使用了$JAVA_HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。"></a>在这里遇到的主要问题是:由于shell脚本中使用了$JAVA_HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。</h6><h4 id="3-linux下查找程序安装位置"><a href="#3-linux下查找程序安装位置" class="headerlink" title="3.linux下查找程序安装位置"></a>3.linux下查找程序安装位置</h4><ul>
+<li>which mysql</li>
+<li>whereis mysql</li>
+<li>rpm -qal |grep mysql</li>
+<li>find ./ -name mysql</li>
+</ul>
+<h4 id="4-linux下的scp命令"><a href="#4-linux下的scp命令" class="headerlink" title="4. linux下的scp命令"></a>4. linux下的scp命令</h4><pre><code>scp -rf user1@host1:path user2@host2:path
+</code></pre><p>  -r:表示递归操作，针对目录</p>
 
     </div>
     <footer>
         
+  
+  <div class="categories">
+    <a href="/categories/个人工作日记/">个人工作日记</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/linux/">linux</a>, <a href="/tags/shell/">shell</a>, <a href="/tags/mysql/">mysql</a>
+  </div>
+
 		<div class="bdsharebuttonbox">
 	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
 	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
@@ -130,6 +168,8 @@ with(document)0[
 
  <nav id="pagination" >
     
+    <a href="/2016/07/13/hello-world/" class="alignleft prev" title="Hello World">Hello World</a>
+    
     
     <div class="clearfix"></div>
 </nav>
@@ -139,7 +179,7 @@ with(document)0[
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="about/index.html" data-title="关于" data-url="http://wowojyc.github.io/about/index.html"></div>
+		<div class="ds-thread" data-thread-key="2016/07/13/2016-07-13个人日记/" data-title="2016-07-13个人工作日记" data-url="http://wowojyc.github.io/2016/07/13/2016-07-13个人日记/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
