@@ -85,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-07-13T12:00:00.000Z" itemprop="datePublished">2016-07-13</time>
-    更新日期:<time datetime="2016-07-14T01:31:55.146Z" itemprop="dateModified">2016-07-14</time>
+    更新日期:<time datetime="2016-07-14T01:34:22.348Z" itemprop="dateModified">2016-07-14</time>
     
   </p>
 </header>
@@ -114,10 +114,10 @@ if (0 != exitValue) {
 <pre><code>使用第二种的话，可以通过builder.environment设置系统环境变量
 </code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Map&lt;String, String&gt; env = builder.environment(); <span class="comment">//获得进程的环境</span></div></pre></td></tr></table></figure>
 <h6 id="在这里遇到的主要问题是-由于shell脚本中使用了-JAVA-HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。"><a href="#在这里遇到的主要问题是-由于shell脚本中使用了-JAVA-HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。" class="headerlink" title="在这里遇到的主要问题是:由于shell脚本中使用了$JAVA_HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。"></a>在这里遇到的主要问题是:由于shell脚本中使用了$JAVA_HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。</h6><h4 id="3-linux下查找程序安装位置"><a href="#3-linux下查找程序安装位置" class="headerlink" title="3.linux下查找程序安装位置"></a>3.linux下查找程序安装位置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-which mysql</div></pre></td></tr></table></figure>
-<p>``bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- whereis mysql</div></pre></td></tr></table></figure>
 <ul>
-<li>whereis mysql<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- rpm -qal |grep mysql</div><div class="line">- find ./ -name mysql</div></pre></td></tr></table></figure>
-</li>
+<li>rpm -qal |grep mysql</li>
+<li>find ./ -name mysql</li>
 </ul>
 <h4 id="4-linux下的scp命令"><a href="#4-linux下的scp命令" class="headerlink" title="4. linux下的scp命令"></a>4. linux下的scp命令</h4><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp -rf user1@host1:path1 user2@host2:path2</div></pre></td></tr></table></figure>
 </code></pre><p>  -r:表示递归操作，针对目录</p>
