@@ -4,7 +4,7 @@
   <subtitle><![CDATA[I am a slow walker , but I never walk backwards .(Abraham Lincoln , American president)]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://wowojyc.github.io/"/>
-  <updated>2016-07-14T01:49:01.810Z</updated>
+  <updated>2016-07-14T01:53:01.754Z</updated>
   <id>http://wowojyc.github.io/</id>
   
   <author>
@@ -19,8 +19,9 @@
     <link href="http://wowojyc.github.io/2016/07/14/hexo-deploy-problem/"/>
     <id>http://wowojyc.github.io/2016/07/14/hexo-deploy-problem/</id>
     <published>2016-07-14T01:43:10.000Z</published>
-    <updated>2016-07-14T01:49:01.810Z</updated>
+    <updated>2016-07-14T01:53:01.754Z</updated>
     <content type="html"><![CDATA[<p>使用hexo时报Deployer not found: github，应注意以下几个地方.</p>
+<a id="more"></a>
 <ol>
 <li><p>运行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
@@ -32,10 +33,8 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>使用hexo时报Deployer not found: github，应注意以下几个地方.</p>
-<ol>
-<li><p>运行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><d]]>
+    <![CDATA[<p>使用hexo时报Deployer not found: github，应注意以下几个地方.</p>]]>
+    
     </summary>
     
       <category term="hexo" scheme="http://wowojyc.github.io/tags/hexo/"/>
@@ -77,27 +76,14 @@
     <link href="http://wowojyc.github.io/2016/07/13/2016-07-13%E4%B8%AA%E4%BA%BA%E6%97%A5%E8%AE%B0/"/>
     <id>http://wowojyc.github.io/2016/07/13/2016-07-13个人日记/</id>
     <published>2016-07-13T12:00:00.000Z</published>
-    <updated>2016-07-14T01:36:48.817Z</updated>
+    <updated>2016-07-14T01:52:37.638Z</updated>
     <content type="html"><![CDATA[<p>mysql调用sql脚本，java调用shell，linux几个常用命令<br><a id="more"></a></p>
 <h5 id="1-MySQL执行外部sql脚本"><a href="#1-MySQL执行外部sql脚本" class="headerlink" title="1. MySQL执行外部sql脚本"></a>1. MySQL执行外部sql脚本</h5><ul>
 <li>登录MySQL客户端，source sql文件的完整路径信息</li>
 <li>登录MySQL客户端, \. sql文件全路径</li>
 </ul>
-<h4 id="2-Java调用shell的方法"><a href="#2-Java调用shell的方法" class="headerlink" title="2.Java调用shell的方法"></a>2.Java调用shell的方法</h4><!--lang:java-->
-<pre><code>// java调用shell
-Process process = Runtime.getRuntime().exec(shellString); 
-BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));  
-String line = &quot;&quot;;  
-while ((line = input.readLine()) != null) {  
-    processList.add(line);  
-}  
-input.close(); 
-// 等待结果返回
-int exitValue = process.waitFor();  
-if (0 != exitValue) {  
-    System.out.println(&quot;call shell failed. error code is :&quot; + exitValue);  
-}  
-</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 或者</span></div><div class="line">List&lt;String&gt; commands = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div><div class="line">commands.add(<span class="string">"pwd"</span>);</div><div class="line">ProcessBuilder builder = <span class="keyword">new</span> ProcessBuilder(commands);</div><div class="line">Process process = builder.start();</div></pre></td></tr></table></figure>
+<h4 id="2-Java调用shell的方法"><a href="#2-Java调用shell的方法" class="headerlink" title="2.Java调用shell的方法"></a>2.Java调用shell的方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// java调用shell</span></div><div class="line">Process process = Runtime.getRuntime().exec(shellString); </div><div class="line">BufferedReader input = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(process.getInputStream()));  </div><div class="line">String line = <span class="string">""</span>;  </div><div class="line"><span class="keyword">while</span> ((line = input.readLine()) != <span class="keyword">null</span>) &#123;  </div><div class="line">    processList.add(line);  </div><div class="line">&#125;  </div><div class="line">input.close(); </div><div class="line"><span class="comment">// 等待结果返回</span></div><div class="line"><span class="keyword">int</span> exitValue = process.waitFor();  </div><div class="line"><span class="keyword">if</span> (<span class="number">0</span> != exitValue) &#123;  </div><div class="line">    System.out.println(<span class="string">"call shell failed. error code is :"</span> + exitValue);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 或者</span></div><div class="line">List&lt;String&gt; commands = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div><div class="line">commands.add(<span class="string">"pwd"</span>);</div><div class="line">ProcessBuilder builder = <span class="keyword">new</span> ProcessBuilder(commands);</div><div class="line">Process process = builder.start();</div></pre></td></tr></table></figure>
 <pre><code>使用第二种的话，可以通过builder.environment设置系统环境变量
 </code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Map&lt;String, String&gt; env = builder.environment(); <span class="comment">//获得进程的环境</span></div></pre></td></tr></table></figure>
 <h6 id="在这里遇到的主要问题是-由于shell脚本中使用了-JAVA-HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。"><a href="#在这里遇到的主要问题是-由于shell脚本中使用了-JAVA-HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。" class="headerlink" title="在这里遇到的主要问题是:由于shell脚本中使用了$JAVA_HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。"></a>在这里遇到的主要问题是:由于shell脚本中使用了$JAVA_HOME换机功能变量，但是通过eclipse直接运行application程序时，获取不到该环境变量。最后通过macos系统中的open命令启动eclipse程序解决了此类问题。</h6><h4 id="3-linux下查找程序安装位置"><a href="#3-linux下查找程序安装位置" class="headerlink" title="3.linux下查找程序安装位置"></a>3.linux下查找程序安装位置</h4><ul>
