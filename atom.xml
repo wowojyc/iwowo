@@ -4,7 +4,7 @@
   <subtitle><![CDATA[I am a slow walker , but I never walk backwards .(Abraham Lincoln , American president)]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://wowojyc.github.io/"/>
-  <updated>2016-07-13T23:33:21.387Z</updated>
+  <updated>2016-07-14T01:49:01.810Z</updated>
   <id>http://wowojyc.github.io/</id>
   
   <author>
@@ -13,6 +13,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hexo 'Deployer not found:github'问题]]></title>
+    <link href="http://wowojyc.github.io/2016/07/14/hexo-deploy-problem/"/>
+    <id>http://wowojyc.github.io/2016/07/14/hexo-deploy-problem/</id>
+    <published>2016-07-14T01:43:10.000Z</published>
+    <updated>2016-07-14T01:49:01.810Z</updated>
+    <content type="html"><![CDATA[<p>使用hexo时报Deployer not found: github，应注意以下几个地方.</p>
+<ol>
+<li><p>运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改_config.yml中的deploy下的type为git</p>
+</li>
+<li><p>修改时请注意，在yml中关键字”:”后必须有空格.</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>使用hexo时报Deployer not found: github，应注意以下几个地方.</p>
+<ol>
+<li><p>运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><d]]>
+    </summary>
+    
+      <category term="hexo" scheme="http://wowojyc.github.io/tags/hexo/"/>
+    
+      <category term="hexo" scheme="http://wowojyc.github.io/categories/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello hexo]]></title>
