@@ -4,7 +4,7 @@
   <subtitle><![CDATA[I am a slow walker , but I never walk backwards .(Abraham Lincoln , American president)]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://wowojyc.github.io/"/>
-  <updated>2016-07-14T01:53:01.754Z</updated>
+  <updated>2016-07-15T09:20:33.450Z</updated>
   <id>http://wowojyc.github.io/</id>
   
   <author>
@@ -13,6 +13,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[2016-07-15个人日记]]></title>
+    <link href="http://wowojyc.github.io/2016/07/15/2016-07-15/"/>
+    <id>http://wowojyc.github.io/2016/07/15/2016-07-15/</id>
+    <published>2016-07-15T09:17:50.000Z</published>
+    <updated>2016-07-15T09:20:33.450Z</updated>
+    <content type="html"><![CDATA[<p>linux下的chown,chgrp,修改非root用户密码,tar命令排除目录<br><a id="more"></a></p>
+<p>####linux命令:</p>
+<ul>
+<li>chown 修改文件所有者</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown -R work directory/filename</div></pre></td></tr></table></figure>
+<p>   -R：针对目录</p>
+<ul>
+<li>chgrp 修改文件所在用户组</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chgrp -R group directory/filename</div></pre></td></tr></table></figure>
+<p>  -R: 针对目录</p>
+<ul>
+<li><p>修改非root帐号密码</p>
+<p>以root帐号登录</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd username</div></pre></td></tr></table></figure>
+<p>输入新密码即可。</p>
+<ul>
+<li>linux 可运行程序搜索路径</li>
+</ul>
+<p>linux会根据PATH中的配置寻找对应的可执行程序</p>
+<ul>
+<li>linux tar命令排除目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zcf tarname.tar tardirectory/ --exclude=excludeDir</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>linux下的chown,chgrp,修改非root用户密码,tar命令排除目录<br>]]>
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wowojyc.github.io/tags/linux/"/>
+    
+      <category term="个人工作日记" scheme="http://wowojyc.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E4%BD%9C%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[hexo 'Deployer not found:github'问题]]></title>
